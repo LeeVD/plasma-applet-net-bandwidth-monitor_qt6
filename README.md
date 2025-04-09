@@ -1,5 +1,6 @@
 ![1a](https://user-images.githubusercontent.com/72889808/217653034-4ed63b12-875b-4001-84f7-b3159d933a99.png)
 
+
 # plasma-applet-net-bandwidth-monitor_qt6
 
 Network bandwidth monitor for KDE Plasma v6.+ using dbus.
@@ -118,4 +119,5 @@ When upgrading via the Plasma 'get widgets' section, make sure you have the new 
 
 ![D](https://user-images.githubusercontent.com/72889808/217654861-3e6d21ac-91bd-41eb-a592-5aedf321624b.png)
 
+![Screenshot_20250409_230433](https://github.com/user-attachments/assets/08b1621d-e615-451b-97ea-3e5c8edc1d8c)
 
