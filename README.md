@@ -10,7 +10,8 @@ KDE Plasma 6 widget that displays network bandwidth data. Built upon the foundat
 I've taken the UI element from netspeed-widget and the dbus workings from system-monitor, glued them together and added many additional options. This widget doesn't need ksysguard to function.
 This is extremely BETA software and the first plasma widget I've worked on. If you find something or many things that aren't working, let me know and I'll take a look when I can.
 
-
+Qt5 version @ [Github:plasma-applet-net-bandwidth-monitor](https://github.com/LeeVD/plasma-applet-net-bandwidth-monitor)  
+  
 ## v6.2025.4.4
 
 Added multiple colour selection options with custom colour picker, options: Default Theme, Base Colour and Speed Based Colours.
