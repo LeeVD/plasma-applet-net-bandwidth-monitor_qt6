@@ -26,7 +26,7 @@ Fixes:
 Text colour in settings section now uses the correct theme text colour.  
 
 ##
-
+Porting to Qtv6 was not easy, expect bugs and report any found.
 Thanks to all those that feedback their experiences using the widget and the thanks received.
 
 ## DONATIONS
