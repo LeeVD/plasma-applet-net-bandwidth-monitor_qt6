@@ -117,3 +117,5 @@ When upgrading via the Plasma 'get widgets' section, make sure you have the new 
 ![C](https://user-images.githubusercontent.com/72889808/217652754-07799096-c390-4bde-a974-8632371cd54d.png)
 
 ![D](https://user-images.githubusercontent.com/72889808/217654861-3e6d21ac-91bd-41eb-a592-5aedf321624b.png)
+
+
