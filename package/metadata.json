@@ -7,10 +7,10 @@
             }
         ],
         "Name": "Network Bandwidth DBUS Widget",
-        "Description": "Plasma v6 Network speed widget powered by DBUS.",
+        "Description": "Kubuntu Testing. Plasma v6 Network speed widget powered by DBUS.",
         "Name[zh_CN]": "Network Bandwidth DBUS Widget",
         "Description[zh_CN]": "网络速度",
-        "Id": "com.github.leevd.nswqt6",
+        "Id": "com.github.leevd.nswqt6.kubuntu",
         "Version": "6.2025.4.4",
         "Category": "Network Monitoring",
         "KPackageStructure": [
