@@ -828,19 +828,19 @@ Item {
         }
 
         if (value < k) {
-            //console.log("value 0 && value < k", value)
+            console.log("value 0 && value < k", value)
             return speedUnitRange([speedUnitB, speedUnitK, speedUnitM, speedUnitG], section, value, calcUnits);
-        } else if (value => k && value < m) {
-            //console.log("value => k && value < m", value)
-            return speedUnitRange([null,       speedUnitK, speedUnitM, speedUnitG], section, value, calcUnits);
-        } else if (value => m && value < g) {
-            //console.log("value => m && value < g", value)
-            return speedUnitRange([null,       null,       speedUnitM, speedUnitG], section, value, calcUnits);
-        } else if (value => g && value < t) {
-            //console.log("value => g && value < t", value)
-            return speedUnitRange([null,       null,       null,       speedUnitG], section, value, calcUnits);
+        } else if (value >= k && value < m) { // Corrected from "value => k" to "value >= k"
+            console.log("value >= k && value < m", value)
+            return speedUnitRange([null, speedUnitK, speedUnitM, speedUnitG], section, value, calcUnits);
+        } else if (value >= m && value < g) { // Corrected from "value => m" to "value >= m"
+            console.log("value >= m && value < g", value)
+            return speedUnitRange([null, null, speedUnitM, speedUnitG], section, value, calcUnits);
+        } else if (value >= g && value < t) { // Corrected from "value => g" to "value >= g"
+            console.log("value >= g && value < t", value)
+            return speedUnitRange([null, null, null, speedUnitG], section, value, calcUnits);
         } else if (value > t) {
-            //console.log("speedTer", value);
+            console.log("speedTer", value);
             return speedTer(section, value, calcUnits);
         }
     }
