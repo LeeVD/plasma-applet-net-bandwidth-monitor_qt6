@@ -1,4 +1,8 @@
+### 17/4/2025
 
+## Fix Release - v6.2025.4.17
+- Fixed issue with bandwidth being stuck in bits and kbits only.
+- added different version of bstrong5280 DBUS file for better compatability with kubuntu. 
 
 ### 9/4/2025
 
