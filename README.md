@@ -11,6 +11,12 @@ I've taken the UI element from netspeed-widget and the dbus workings from system
 This is extremely BETA software and the first plasma widget I've worked on. If you find something or many things that aren't working, let me know and I'll take a look when I can.
 
 Qt5 version @ [Github:plasma-applet-net-bandwidth-monitor](https://github.com/LeeVD/plasma-applet-net-bandwidth-monitor)  
+
+  
+## Fix Release - v6.2025.4.17
+- Fixed issue with bandwidth being stuck in bits and kbits only.
+- added different version of bstrong5280 DBUS file for better compatability with kubuntu. 
+  
   
 ## v6.2025.4.4
 
