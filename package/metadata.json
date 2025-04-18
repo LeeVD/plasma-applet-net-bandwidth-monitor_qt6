@@ -11,7 +11,7 @@
         "Name[zh_CN]": "Network Bandwidth DBUS Widget",
         "Description[zh_CN]": "网络速度",
         "Id": "com.github.leevd.nswqt6",
-        "Version": "6.2025.4.4",
+        "Version": "6.2025.4.17",
         "Category": "Network Monitoring",
         "KPackageStructure": [
             "Plasma/Applet"
