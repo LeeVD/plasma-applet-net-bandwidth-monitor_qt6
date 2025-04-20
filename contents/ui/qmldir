@@ -1,0 +1,2 @@
+module DbusModel
+plugin qmldbusmodelplugin DbusModel
