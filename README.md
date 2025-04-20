@@ -1,5 +1,4 @@
-![1a](https://user-images.githubusercontent.com/72889808/217653034-4ed63b12-875b-4001-84f7-b3159d933a99.png)
-
+![widget_v6_logo2](https://github.com/user-attachments/assets/5277fff0-703a-4829-be45-dc447ddbdcba) ![1a](https://user-images.githubusercontent.com/72889808/217653034-4ed63b12-875b-4001-84f7-b3159d933a99.png)
 
 # plasma-applet-net-bandwidth-monitor_qt6
 
@@ -10,17 +9,26 @@ KDE Plasma 6 widget that displays network bandwidth data. Built upon the foundat
 I've taken the UI element from netspeed-widget and the dbus workings from system-monitor, glued them together and added many additional options. This widget doesn't need ksysguard to function.
 This is extremely BETA software and the first plasma widget I've worked on. If you find something or many things that aren't working, let me know and I'll take a look when I can.
 
-Qt5 version @ [Github:plasma-applet-net-bandwidth-monitor](https://github.com/LeeVD/plasma-applet-net-bandwidth-monitor)  
+## v6.2025.4.20
 
-  
-## Fix Release - v6.2025.4.17
+Another bug fix release.
+
+- Fixed widgetshow wrong speed [bug_#6].
+- Fixed Speed Unit Selection ignore higher conversions [bug_#5].
+- Fixed Network Settings page, interface list hierarchy issue [bug_#4].
+- Fixed Updating from 'Install Widget From Local File' error [bug_#3].
+
+## v6.2025.4.17
+
+Bug Fix Release.
+
 - Fixed issue with bandwidth being stuck in bits and kbits only.
-- added different version of bstrong5280 DBUS file for better compatability with kubuntu. 
-  
-  
+- added different version of bstrong5280 DBUS file for better compatability with kubuntu.
+
 ## v6.2025.4.4
 
 Added multiple colour selection options with custom colour picker, options: Default Theme, Base Colour and Speed Based Colours.
+
 - Base Colour, each element can be assign its own hardcoded colour.
 - Speed Colour, icons or digits or suffix (or all of the row of the three elements) can be assigned colours based on if the speed is in bit, Kil, Meg or Gig.
 - Default Theme, will respect the underlying default theme colours.
@@ -31,14 +39,15 @@ Continued code improvements.
 Improved theming and layout in settings panel.
 
 Fixes:
-Text colour in settings section now uses the correct theme text colour.  
+Text colour in settings section now uses the correct theme text colour.
 
 ##
-Porting to Qtv6 was not easy, expect bugs and report any found.
+
 Thanks to all those that feedback their experiences using the widget and the thanks received.
 
 ## DONATIONS
-Writing and maintaining this program takes a lot of time and effort.  If you find this program useful and can make a donation, it will be very much welcomed and appreciated.
+
+I like money. Donations are very much welcomed and appreciated.
 
 ### Fiat Currency:
 
@@ -96,7 +105,7 @@ When upgrading via the Plasma 'get widgets' section, make sure you have the new 
 
 ## TODO:
 
-- Continued Interface monitoring
+- Continued monitoring for new Interface's.
 - Main options:
   - shrink area on taskbar when hidden
   - minimum activity for hidden
@@ -114,17 +123,12 @@ When upgrading via the Plasma 'get widgets' section, make sure you have the new 
 
 ## SCREENSHOTS
 
-![4](https://user-images.githubusercontent.com/72889808/209709200-9f4c045e-2b54-4fb3-9758-62c4096e8fc9.png)
+![4](https://user-images.githubusercontent.com/72889808/209709200-9f4c045e-2b54-4fb3-9758-62c4096e8fc9.png) ![widget_v6_taskbar2](https://github.com/user-attachments/assets/a0d0f14c-80db-4666-8b19-7ace35463cb3)
 
 ![A](https://user-images.githubusercontent.com/72889808/217652964-20a0556a-a403-40e5-9e54-5a49bdb83fd5.png)
 
-![1](https://user-images.githubusercontent.com/72889808/209696486-0419dd51-f7c8-47a4-aba6-1f2fc4590812.png)
+![widget_v6_menu2](https://github.com/user-attachments/assets/7595a354-24d2-4c39-b42d-f4c439e79dad)
 
-![B](https://user-images.githubusercontent.com/72889808/217652736-9e8c7d27-d5eb-486f-ab66-e8bcc28b87ca.png)
-
-![C](https://user-images.githubusercontent.com/72889808/217652754-07799096-c390-4bde-a974-8632371cd54d.png)
+![widget_v6_networksettings](https://github.com/user-attachments/assets/6f68916f-a15f-445f-914c-e7245cb0a8d4)
 
 ![D](https://user-images.githubusercontent.com/72889808/217654861-3e6d21ac-91bd-41eb-a592-5aedf321624b.png)
-
-![Screenshot_20250409_230433](https://github.com/user-attachments/assets/08b1621d-e615-451b-97ea-3e5c8edc1d8c)
-
