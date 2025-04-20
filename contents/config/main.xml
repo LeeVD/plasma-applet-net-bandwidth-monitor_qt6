@@ -142,9 +142,9 @@
             <default>false</default>
         </entry>
         <!-- FOR configNetwork.qml -->
-        <entry name="allNetworksChecked" type="Bool">
+        <!-- <entry name="allNetworksChecked" type="Bool">
             <default>true</default>
-        </entry>        
+        </entry>         -->
         <!-- FOR TESTING -->
         <entry name="testing" type="Bool">
             <default>false</default>
