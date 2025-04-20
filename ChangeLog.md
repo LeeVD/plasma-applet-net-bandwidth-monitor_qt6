@@ -4,7 +4,7 @@
 
 Another bug fix release.
 
-- Fixed widgetshow wrong speed [bug_#6].
+- Fixed widget show wrong speed [bug_#6].
 - Fixed Speed Unit Selection ignore higher conversions [bug_#5].
 - Fixed Network Settings page, interface list hierarchy issue [bug_#4].
 - Fixed Updating from 'Install Widget From Local File' error [bug_#3].
