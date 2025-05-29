@@ -748,7 +748,7 @@ Item {
         // console.log("speedBit()", section, "value:", value, "bit:", value)
         // console.log("...")
         if (section === 'number') return decimalFilter0 ? value.toFixed(decimalPlaceLogic(value)) : value; // result = '' if less than a Kx 
-        else return shortUnits ? (boolUnits ? 'b' : 'B') : suffix('b') 
+        else return getUnit('1');
     }
 
     function speedKil(section, value, kil) {
@@ -756,7 +756,7 @@ Item {
         // console.log("...")
         var calValue = value/kil || 0
         if (section === 'number') return decimalFilter1 ? calValue.toFixed(decimalPlaceLogic(value)) : customRound(calValue); // return Kx if less than a Mx
-        else return shortUnits ? (boolUnits ? 'k' : 'K') : suffix('k') 
+        else return getUnit('k');
     }
 
     function speedMeg(section, value, meg) {
@@ -764,7 +764,7 @@ Item {
         // console.log("...")
         var calValue = value/meg || 0
         if (section == 'number') return decimalFilter2 ? calValue.toFixed(decimalPlaceLogic(value)) : customRound(calValue); // return Mx if less than a Gx
-        else return shortUnits ? 'M' : suffix('M')
+        else return getUnit('m');
     }
 
     function speedGig(section, value, gig) {
@@ -772,7 +772,7 @@ Item {
         // console.log("...")
         var calValue = value/gig || 0
         if (section === 'number') return decimalFilter3 ? calValue.toFixed(decimalPlaceLogic(value)) : customRound(calValue); // return Gx if less than a Gx
-        else return shortUnits ? 'G' : suffix('G')
+        else return getUnit('g');
     }
 
     function speedTer(section, value, ter) {
@@ -780,11 +780,11 @@ Item {
         // console.log("...")
         var calValue = value/ter || 0
         if (section === 'number') return decimalFilter3 ? calValue.toFixed(decimalPlaceLogic(value)) : customRound(calValue); // return Tx if less than a Tx
-        else return shortUnits ? 'T' : suffix('T') 
+        else return getUnit('t');
     }
+
     // FUNNEL THE REQUEST TO APPROPRIATE SPEED UNIT FUNCTIONS
     function speedUnitRange(units, section, value, calcUnits) {
-
         const thisSpeedUnits = [speedBit, speedKil, speedMeg, speedGig, speedTer];
         for (let i = 0; i < units.length; i++) {
             if (units[i]) return thisSpeedUnits[i](section, value, calcUnits[i]);
@@ -845,43 +845,37 @@ Item {
         }
     }
 
-
-    function suffix(unit) { // NEW SOLUTION TO SUFFIX
+    function getUnit(prefix) {
         // https://en-academic.com/dic.nsf/enwiki/8315069#Kibibit_per_second
-        //! BINARY:                   DECIMAL:
-        //! Kibibit = 1024 bits    |  Kilobit = 1000 bits
-        //! Kibibyte = 1024 bytes  |  Kilobyte = 1000 bytes
-        //! Kib/s    Mib/s         |  kb/s    Mb/s
-        //! KiB/s    MiB/s         |  KB/s    MB/s
+        //! Input: 1 k m g t
+        //! Output(1000 bits):  b kb Mb Gb Tb     | b k M G T  +  /s or ps
+        //! Output(1000 Bytes): B kB MB GB TB     | B k M G T  +  /s or ps
+        //! Output(1024 bits):  b Kib Mib Gib Tib | b K M G T  +  /s or ps
+        //! Output(1024 Bytes): B KiB MiB GiB TiB | B K M G T  +  /s or ps
 
-        // APPEND BINARY OR DECIMAL UNIT PREFIX
-        if (binaryDecimal === 'binary') {
-            if (unit !== 'b') { 
-                if (unit === 'k') { 
-                    unit = 'K' 
-                }  
-                unit += 'i'
-            }
-        }
-        // CONVERT OR APPEND BIT OR BYTE UNIT PREFIX
-        if (speedUnits === 'bits') {
-            if (unit !== 'b') { 
-                unit += 'b' 
-            }
-            
-        } else {
-            if (unit === 'b') { 
-                unit =  'B' 
-            } else { 
-                unit += 'B' 
-            }
-        }
-        // APPEND PER SECOND PREFIX
-        if (showSeconds === true) {
-            unit += secondsPrefix
-        }
-        return unit
-    }    
+        const prefixTableBinary = {
+            '1': '',
+            'k': 'Ki',
+            'm': 'Mi',
+            'g': 'Gi',
+            't': 'Ti',
+        };
+        const prefixTableDecimal = {
+            '1': '',
+            'k': 'k',
+            'm': 'M',
+            'g': 'G',
+            't': 'T',
+        };
+
+        prefix = binaryDecimal === 'binary' ? prefixTableBinary[prefix] : prefixTableDecimal[prefix];
+        let unit = speedUnits === 'bits' ? 'b' : 'B';
+        let time = showSeconds ? secondsPrefix : '';
+
+        let result = prefix + unit + time;
+        result = shortUnits ? result.charAt(0) : result;
+        return result;
+    }
 
     //################## SERIALISATION FIX ###########################
 
